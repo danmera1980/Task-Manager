@@ -17,19 +17,13 @@ export class LoginComponent {
     private toastr: ToastrService,
     private authService: AuthService,
     private router: Router
-  ) {}
+  ) {
+    sessionStorage.clear();
+  }
 
   loginForm = this.formBuilder.group({
     username: this.formBuilder.control('', Validators.required),
-    password: this.formBuilder.control(
-      '',
-      Validators.compose([
-        Validators.pattern(
-          '(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}'
-        ),
-        Validators.required,
-      ])
-    ),
+    password: this.formBuilder.control('', Validators.required),
   });
 
   login() {
@@ -38,7 +32,19 @@ export class LoginComponent {
         .LoginUser(this.loginForm.value.username!)
         .subscribe((res) => {
           this.userData = res;
-          console.log(this.userData);
+          if (this.userData[0].password === this.loginForm.value.password) {
+            console.log(this.userData);
+            if (this.userData[0].isActive) {
+              this.toastr.success('User Logged in');
+              sessionStorage.setItem('username', this.userData[0].username);
+              sessionStorage.setItem('userRole', this.userData[0].role);
+              this.router.navigate(['']);
+            } else {
+              this.toastr.error('Inactive User');
+            }
+          } else {
+            this.toastr.error('Invalid Credentials');
+          }
         });
     }
   }

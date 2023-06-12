@@ -10,18 +10,26 @@ export class AuthService {
   apiUrl = environment['serverUrl']; // TODO put the url from the .env file
 
   GetAll() {
-    return this.http.get(`${this.apiUrl}/user`);
+    return this.http.get(`${this.apiUrl}/users`);
   }
 
   LoginUser(username: string) {
-    return this.http.get(`${this.apiUrl}/user/${username}`);
+    return this.http.get(`${this.apiUrl}/users?username=${username}`);
   }
 
   RegisterUser(userData: any) {
-    return this.http.post(`${this.apiUrl}/user`, userData);
+    return this.http.post(`${this.apiUrl}/users`, userData);
   }
 
   UpdateUser(id: string, userData: any) {
-    return this.http.put(`${this.apiUrl}/user/${id}`, userData);
+    return this.http.put(`${this.apiUrl}/users/${id}`, userData);
+  }
+
+  IsLoggedIn(){
+    return sessionStorage.getItem('username')!=null;
+  }
+
+  GetUserRole(){
+    return sessionStorage.getItem('userRole')!=null?sessionStorage.getItem('userRole')?.toString():'';
   }
 }

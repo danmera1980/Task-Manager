@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss'],
 })
-export class HeaderComponent {
-  @Input() sidebarOpen:boolean = true;
+export class NavigationComponent {
+  @Input() sidebarOpen: boolean = true;
   @Output() sidebarOpenChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   menuClick() {

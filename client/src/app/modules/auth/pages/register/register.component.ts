@@ -38,8 +38,8 @@ export class RegisterComponent {
       '',
       Validators.compose([Validators.email, Validators.required])
     ),
-    role: this.formBuilder.control(''),
-    isActive: this.formBuilder.control(false, Validators.required),
+    role: this.formBuilder.control('user'),
+    isActive: this.formBuilder.control(true, Validators.required),
   });
 
   register() {

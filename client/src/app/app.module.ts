@@ -9,14 +9,17 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AuthModule } from './modules/auth/auth.module';
-import { HomeModule } from './modules/home/home.module';
+import { MainModule } from './modules/main/main.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './style/material.module';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, AuthLayoutComponent],
+  declarations: [
+    AppComponent,
+    AuthLayoutComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,8 +29,8 @@ import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component'
     AuthModule,
     CoreModule,
     SharedModule,
-    HomeModule,
-    ToastrModule.forRoot()
+    MainModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
