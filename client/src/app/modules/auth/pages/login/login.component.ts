@@ -33,12 +33,11 @@ export class LoginComponent {
         .subscribe((res) => {
           this.userData = res;
           if (this.userData[0].password === this.loginForm.value.password) {
-            console.log(this.userData);
             if (this.userData[0].isActive) {
               this.toastr.success('User Logged in');
               sessionStorage.setItem('username', this.userData[0].username);
               sessionStorage.setItem('userRole', this.userData[0].role);
-              this.router.navigate(['']);
+              this.router.navigate(['/main']);
             } else {
               this.toastr.error('Inactive User');
             }

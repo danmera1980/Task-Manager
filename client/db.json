@@ -27,5 +27,61 @@
       "isActive": true,
       "id": 3
     }
+  ],
+  "tasks": [
+    {
+      "description": "test",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 1
+    },
+    {
+      "description": "asdasdasd",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 2
+    },
+    {
+      "description": "example 3",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 3
+    },
+    {
+      "description": "asdasd",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 4
+    },
+    {
+      "description": "tests 1",
+      "status": "done",
+      "owner": "danmera",
+      "id": 5
+    },
+    {
+      "description": "test 11",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 6
+    },
+    {
+      "description": "Test 12",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 7
+    },
+    {
+      "description": "asdasdasd",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 8
+    },
+    {
+      "description": "My task",
+      "status": "todo",
+      "owner": "julian",
+      "id": 9
+    }
   ]
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '@env';
+import { RegisterUser } from '../models/user.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -17,11 +18,11 @@ export class AuthService {
     return this.http.get(`${this.apiUrl}/users?username=${username}`);
   }
 
-  RegisterUser(userData: any) {
+  RegisterUser(userData: RegisterUser) {
     return this.http.post(`${this.apiUrl}/users`, userData);
   }
 
-  UpdateUser(id: string, userData: any) {
+  UpdateUser(id: string, userData: RegisterUser) {
     return this.http.put(`${this.apiUrl}/users/${id}`, userData);
   }
 

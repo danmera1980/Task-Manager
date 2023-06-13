@@ -44,10 +44,21 @@ export class RegisterComponent {
 
   register() {
     if (this.registerForm.valid) {
-      this.authService.RegisterUser(this.registerForm.value).subscribe(res => {
-        this.toastr.success('User Registered Successfully!')
-        this.router.navigate(['login'])
-      })
+      const formValues = this.registerForm.value;
+
+      this.authService
+        .RegisterUser({
+          name: formValues.name?.toString(),
+          username: formValues.username?.toString(),
+          password: formValues.password?.toString(),
+          email: formValues.email?.toString(),
+          role: formValues.role?.toString(),
+          isActive: Boolean(formValues.isActive?.toString()),
+        })
+        .subscribe((res) => {
+          this.toastr.success('User Registered Successfully!');
+          this.router.navigate(['login']);
+        });
     } else {
       this.toastr.warning('Please enter valid data');
     }
