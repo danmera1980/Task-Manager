@@ -4,7 +4,7 @@
       "username": "danmera",
       "name": "Daniel Mera",
       "password": "Daniel@1234",
-      "email": "danmera@danmera.com",
+      "email": "dan@dan.com",
       "role": "admin",
       "isActive": true,
       "id": 1
@@ -13,7 +13,7 @@
       "username": "pepito",
       "name": "dave",
       "password": "asd123!A",
-      "email": "davidboccalandro@hotmail.com",
+      "email": "david@hotmail.com",
       "role": "user",
       "isActive": true,
       "id": 2

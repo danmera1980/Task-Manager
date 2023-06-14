@@ -11,23 +11,32 @@
       >
         <mat-form-field>
           <mat-label>Username</mat-label>
-          <input matInput formControlName="username" />
-          <mat-error *ngIf="registerForm.get('username')!.hasError('required')">Username is required</mat-error>
+          <input required matInput formControlName="username" />
+          <mat-error *ngIf="registerForm.get('username')!.hasError('required')"
+            >Username is required</mat-error
+          >
         </mat-form-field>
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input matInput formControlName="name" />
-          <mat-error *ngIf="registerForm.get('name')!.hasError('required')">Name is required</mat-error>
+          <input required matInput formControlName="name" />
+          <mat-error *ngIf="registerForm.get('name')!.hasError('required')"
+            >Name is required</mat-error
+          >
         </mat-form-field>
         <mat-form-field>
           <mat-label>Password</mat-label>
           <input
+            required
             matInput
             formControlName="password"
             [type]="hide ? 'password' : 'text'"
           />
-          <mat-error *ngIf="registerForm.get('password')!.hasError('required')">Password is required</mat-error>
-          <mat-error *ngIf="registerForm.get('password')!.hasError('pattern')">Password needs the correct pattern</mat-error>
+          <mat-error *ngIf="registerForm.get('password')!.hasError('required')"
+            >Password is required</mat-error
+          >
+          <mat-error *ngIf="registerForm.get('password')!.hasError('pattern')"
+            >Needs the correct pattern</mat-error
+          >
           <button
             mat-icon-button
             matSuffix
@@ -40,9 +49,24 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Confirm Password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'"/>
-          <mat-error *ngIf="registerForm.get('password')!.hasError('required')">Password is required</mat-error>
-          <mat-error *ngIf="registerForm.get('password')!.hasError('pattern')">Password needs the correct pattern</mat-error>
+          <input
+            required
+            matInput
+            formControlName="confirmPassword"
+            [type]="hide ? 'password' : 'text'"
+          />
+          <mat-error
+            *ngIf="registerForm.get('confirmPassword')!.hasError('required')"
+            >Confirm Password is required</mat-error
+          >
+          <mat-error
+            *ngIf="registerForm.get('confirmPassword')!.hasError('pattern')"
+            >Needs the correct pattern</mat-error
+          >
+          <mat-error
+            *ngIf="registerForm.get('confirmPassword')!.hasError('mismatch')"
+            >Confirm Password needs to match to Password</mat-error
+          >
           <button
             mat-icon-button
             matSuffix
@@ -55,7 +79,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input type="email" matInput formControlName="email" />
+          <input required type="email" matInput formControlName="email" />
         </mat-form-field>
         <button mat-raised-button color="primary">Register</button>
         <a routerLink="/login" mat-flat-button>Back to Login</a>
