@@ -1,17 +1,18 @@
 <mat-toolbar color="primary">
-  <div>
+  <div class="header-left">
     <button
       type="button"
       aria-label="Toggle sidenav"
       mat-icon-button
+      matTooltip="Open Menu"
       (click)="menuClick()"
       *ngIf="!sidebarOpen"
     >
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <span>Task Manager</span>
+    <span class="title">Task Manager</span>
   </div>
-  <button mat-icon-button routerLink="/login">
+  <button mat-icon-button matTooltip="Logout" routerLink="/login">
     <mat-icon>logout</mat-icon>
   </button>
 </mat-toolbar>

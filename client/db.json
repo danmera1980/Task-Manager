@@ -79,13 +79,13 @@
     },
     {
       "description": "My task",
-      "status": "in_progress",
+      "status": "revision",
       "owner": "julian",
       "id": 9
     },
     {
       "description": "New Task",
-      "status": "done",
+      "status": "revision",
       "owner": "julian",
       "id": 10
     },
