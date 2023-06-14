@@ -1,4 +1,4 @@
-# My Practice Project
+# Task Manager
 
 This project is a personal endeavor to practice, learn, and improve my skills in Angular, Typescript, CSS, and Material Design. It serves as a sandbox where I can experiment with different techniques and concepts while building a functional application.
 
