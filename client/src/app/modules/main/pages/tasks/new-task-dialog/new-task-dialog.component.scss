@@ -2,3 +2,7 @@ mat-dialog-content {
   display: flex;
   flex-direction: column;
 }
+
+textarea {
+  max-height: 40vh;
+}

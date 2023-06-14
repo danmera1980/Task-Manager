@@ -31,19 +31,19 @@
   "tasks": [
     {
       "description": "test",
-      "status": "todo",
+      "status": "done",
       "owner": "danmera",
       "id": 1
     },
     {
       "description": "asdasdasd",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "danmera",
       "id": 2
     },
     {
       "description": "example 3",
-      "status": "todo",
+      "status": "revision",
       "owner": "danmera",
       "id": 3
     },
@@ -61,7 +61,7 @@
     },
     {
       "description": "test 11",
-      "status": "todo",
+      "status": "done",
       "owner": "danmera",
       "id": 6
     },
@@ -73,15 +73,33 @@
     },
     {
       "description": "asdasdasd",
-      "status": "todo",
+      "status": "revision",
       "owner": "danmera",
       "id": 8
     },
     {
       "description": "My task",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "julian",
       "id": 9
+    },
+    {
+      "description": "New Task",
+      "status": "done",
+      "owner": "julian",
+      "id": 10
+    },
+    {
+      "description": "qweqweq",
+      "status": "todo",
+      "owner": "danmera",
+      "id": 11
+    },
+    {
+      "description": "This is an example of a task that I need to do",
+      "status": "revision",
+      "owner": "danmera",
+      "id": 12
     }
   ]
 }

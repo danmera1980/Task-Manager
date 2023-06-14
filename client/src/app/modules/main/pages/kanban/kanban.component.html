@@ -1,1 +1,22 @@
-<p>kanban works!</p>
+<div class="kanban-cards">
+  <ng-container cdkDropListGroup>
+    <mat-card class="kanban-card" *ngFor="let board of boards">
+      <mat-card-header>
+        <h2>{{board.title}}</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <ul
+          id="{{board.id}}"
+          cdkDropList
+          [cdkDropListData]="board.board"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <mat-card class="item-card"  cdkDrag *ngFor="let task of board.board">
+            <mat-card-content >{{task.description}}</mat-card-content>
+          </mat-card>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+
+  </ng-container>
+</div>

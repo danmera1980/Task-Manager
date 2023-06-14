@@ -7,9 +7,10 @@ import { TasksComponent } from './pages/tasks/tasks.component';
 import { KanbanComponent } from './pages/kanban/kanban.component';
 import { NewTaskDialogComponent } from './pages/tasks/new-task-dialog/new-task-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { StatusPipe } from './status.pipe';
 
 @NgModule({
-  declarations: [MainComponent, TasksComponent, KanbanComponent, NewTaskDialogComponent],
+  declarations: [MainComponent, TasksComponent, KanbanComponent, NewTaskDialogComponent, StatusPipe],
   imports: [CommonModule, MaterialModule, LayoutModule, FormsModule],
 })
 export class MainModule {}

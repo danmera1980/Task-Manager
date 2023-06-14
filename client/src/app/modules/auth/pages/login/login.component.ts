@@ -37,7 +37,7 @@ export class LoginComponent {
               this.toastr.success('User Logged in');
               sessionStorage.setItem('username', this.userData[0].username);
               sessionStorage.setItem('userRole', this.userData[0].role);
-              this.router.navigate(['/main']);
+              this.router.navigate(['/main/tasks']);
             } else {
               this.toastr.error('Inactive User');
             }

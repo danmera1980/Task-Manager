@@ -1,4 +1,5 @@
-<mat-toolbar> Menu
+<mat-toolbar>
+  Menu
   <button
     type="button"
     aria-label="Toggle sidenav"
@@ -6,19 +7,21 @@
     (click)="menuClick()"
     *ngIf="sidebarOpen"
   >
-    <mat-icon aria-label="Side nav toggle icon"
-      >close</mat-icon
-    >
+    <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
   </button>
 </mat-toolbar>
 <mat-divider></mat-divider>
 <mat-nav-list>
   <a mat-list-item routerLink="/main/tasks">
-    <mat-icon>checklist</mat-icon>
-    TASKS
+    <div class="menu-item">
+      <mat-icon>checklist</mat-icon>
+      <div>TASKS</div>
+    </div>
   </a>
   <a mat-list-item routerLink="/main/board">
-    <mat-icon>width_normal</mat-icon>
-    BOARD
+    <div class="menu-item">
+      <mat-icon>width_normal</mat-icon>
+      <div>BOARD</div>
+    </div>
   </a>
 </mat-nav-list>

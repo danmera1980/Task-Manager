@@ -4,28 +4,29 @@ import { KanbanComponent } from "@app/modules/main/pages/kanban/kanban.component
 import { MainComponent } from "@app/modules/main/pages/main.component";
 import { TasksComponent } from "@app/modules/main/pages/tasks/tasks.component";
 import { LayoutComponent } from "./layout.component";
+import { AuthGuard } from "@app/core/guard/auth.guard";
 
 const routes: Routes = [
-
   {
     path: 'main',
     component: LayoutComponent,
     children: [
       {
-        path:'',
+        path: '',
         redirectTo: 'tasks',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'tasks',
-        component: TasksComponent
+        component: TasksComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'board',
-        component: KanbanComponent
-      }
-    ]
-  }
+        component: KanbanComponent, canActivate: [AuthGuard]
+      },
+    ],
+  },
 ];
 
 @NgModule({

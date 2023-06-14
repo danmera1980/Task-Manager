@@ -2,10 +2,10 @@
 <mat-dialog-content class="content">
   <mat-form-field>
     <mat-label>Description</mat-label>
-    <textarea matInput [(ngModel)]="newTask.description"></textarea>
+    <textarea matInput [(ngModel)]="newTask.description" required=""></textarea>
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-raised-button color="primary" (click)="createNewTask()">Save</button>
+  <button mat-raised-button color="primary" (click)="createNewTask()" [disabled]="newTask.description === ''">Save</button>
   <button mat-raised-button (click)="onNoClick()">Cancel</button>
 </mat-dialog-actions>

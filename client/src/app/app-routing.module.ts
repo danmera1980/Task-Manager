@@ -8,8 +8,13 @@ import { LayoutComponent } from './layout/layout.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'main', redirectTo: '/main/tasks', pathMatch: 'full' },
   { path: 'main', component: LayoutComponent, canActivate: [AuthGuard] },
- /*  { path: '', redirectTo: '/main', pathMatch: 'full' }, */
+  {
+    path: '',
+    redirectTo: '/main/tasks',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

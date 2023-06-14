@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Task } from '@app/core/models/task.interface';
 import { TasksService } from '@app/data/service/tasks.service';
-import { PopupComponent } from '@app/shared/components/popup/popup.component';
 import { NewTaskDialogComponent } from './new-task-dialog/new-task-dialog.component';
 import { ToastrService } from 'ngx-toastr';
 
@@ -13,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class TasksComponent implements OnInit {
   tasks!: Task[];
-  displayedColumns: string[] = ['id', 'description', 'status'];
+  displayedColumns: string[] = [ 'description', 'status'];
 
   constructor(
     private tasksService: TasksService,
@@ -28,6 +27,7 @@ export class TasksComponent implements OnInit {
 
   newTask() {
     this.newTaskDialog.open(NewTaskDialogComponent, {
+      width:'50vw',
       enterAnimationDuration: '300ms',
       exitAnimationDuration: '300ms',
     });
