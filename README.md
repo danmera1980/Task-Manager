@@ -11,31 +11,37 @@ The project is a web application that allows users to manage tasks. It provides 
 To start the application, follow the steps below:
 
 1. Clone the repository to your local machine:
+
    ```
    git clone https://github.com/your-username/your-repo.git
    ```
 
 2. Navigate to the project directory:
+
    ```
    cd your-repo
    ```
 
 3. Navigate to the Client directory:
+
     ```
     cd client
     ```
 
 4. Install the project dependencies using npm or yarn:
+
    ```
    npm install
    ```
 
 5. Build and run the application:
+
    ```
    ng serve
    ```
 
 6. Start the temporary backend server
+
    ```
    json-server --watch db.json
    ```
@@ -52,6 +58,16 @@ The project follows a standard Angular project structure. Here are the key direc
 - `src/assets`: Contains static assets such as images, stylesheets, and configuration files.
 - `angular.json`: Angular project configuration file.
 - `package.json`: Includes project dependencies and build scripts.
+
+## TODO
+
+### Frontend
+
+- Add additional functionalities
+
+### Backend
+
+- Create all the necessary endpoints
 
 ## Contributing
 
